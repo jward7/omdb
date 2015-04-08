@@ -1,5 +1,18 @@
-<h1>HERE</h1>
+<h1>Which movie would you like to add to the database?</h1>
 
-<h1><%= @result['title'] %></h1>
-<img src="<%= @result['poster'] %>" alt=""/><%= @result['poster'] %>
-<p>@multi</p>
+<ul>
+  <% @title_year.each do |x| %>
+      <a href=""><li><%= x %></li></a>
+  <% end  %>
+</ul>
+
+<ul>
+  <% @result['search'].each  do |x| %>
+      <a href="<%= "#{x['imdbID']}" %>"><li><%= "#{x['Title']}, #{x['Year']}" %></li></a>
+  <% end  %>
+</ul>
+
+
+
+<p>result_subset: <%= @result_subset %></p>
+<p>Extract: <%= @extract %></p>
