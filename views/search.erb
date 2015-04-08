@@ -1,0 +1,10 @@
+<h2>Search OMDb</h2>
+
+<form action="/search" method="post">
+  <label for="">title</label>
+  <input type="text" name="title"/>
+  <label for="">year</label>
+  <input type="text" name="year"/>
+  <button>Search</button>
+  <p><%= @results %></p>
+</form>

@@ -1,0 +1,12 @@
+<h1>Favorite Movies</h1>
+
+<form action="/movie" method="post">
+
+  <label for="">Name</label>
+  <input type="text" name="movie_name" placeholder="enter movie name" value="<%= params[:search]%>"/><button>Search</button>
+
+</form>
+
+<div><%= @search %></div>
+
+

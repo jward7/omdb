@@ -1,0 +1,10 @@
+<h1>Movies</h1>
+
+<% @rows.each do |row| %>
+    <p><% row['title'] %></p>
+    <img src="<%= row['image_url'] %>" alt=""/>
+    <a href="/movie/<%= row['id'] %>">edit</a>
+    <a href="/movie/<%= row['id'] %>/delete">delete</a>
+<% end %>
+
+<a href="/movie/new">New Movie</a>
